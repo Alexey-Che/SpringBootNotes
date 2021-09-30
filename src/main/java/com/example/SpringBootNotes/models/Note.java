@@ -7,15 +7,13 @@ import javax.persistence.*;
 @Entity
 @Table(name = "hibernate")
 public class Note {
+
     @Id
     @GenericGenerator(name = "generator", strategy = "increment")
     @GeneratedValue(generator = "generator")
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
     private String title;
-    @Column(name = "text")
     private String text;
 
     public Long getId() {
